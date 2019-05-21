@@ -1,15 +1,33 @@
 server:
   port: 8077
+spring:
+  profiles:
+    active: dev
 
-person:
-  lastName: zhangsan
-  age: 18
-  boss: false
-  birth: 2017/12/12
-  maps: {k1: 11,k2: 12}
-  lists:
-   - lisi
-   - wangmazi
-  dog:
-   name: 小狗
-   age: 2
+---
+
+server:
+  port: 8055
+spring:
+  profiles: dev
+---
+
+server:
+  port: 8044
+spring:
+  profiles: prod
+---
+#person:
+#  lastName: zhangsan
+#  last-name: 张三
+#  age: 18
+#  boss: false
+#  birth: 2017/12/12
+#  maps: {k1: 11,k2: 12}
+#  lists:
+#   - lisi
+#   - wangmazi
+#  dog:
+#   name: 小狗
+#   age: 2
+---
